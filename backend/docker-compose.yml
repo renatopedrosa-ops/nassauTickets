@@ -1,0 +1,20 @@
+# MySQL 8.0 pronto para o nassauTickets (opcional: use se não tiver MySQL instalado).
+# Uso: docker compose up -d   (a partir da pasta backend/)
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: nassau-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: nassau_tickets
+      MYSQL_USER: nassau
+      MYSQL_PASSWORD: nassau123
+      TZ: America/Recife
+    ports:
+      - "3306:3306"
+    volumes:
+      - nassau-mysql-data:/var/lib/mysql
+
+volumes:
+  nassau-mysql-data:
