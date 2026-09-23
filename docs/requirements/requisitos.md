@@ -2,6 +2,11 @@
 
 Sistema de Controle de Atendimento por senhas de um Laboratório de Análises Clínicas.
 
+Documentos relacionados:
+- [Disponibilidade, recuperação de falhas e desempenho](disponibilidade-e-desempenho.md)
+- [Casos de uso](../models/uml/casos-de-uso.md) e [diagramas UML](../models/uml/diagramas.md)
+- [Modelo Entidade-Relacionamento](../mer/MER.md)
+
 ## 1. Agentes
 
 | Sigla | Agente           | Responsabilidade                                                                                       |
@@ -111,6 +116,8 @@ AGUARDANDO → DESCARTADA (fim do expediente)
 | RNF05 | Auditoria       | Toda transição de estado é registrada em `ticket_events` com data/hora, usuário e guichê. Os registros não são apagados pela aplicação. |
 | RNF06 | Desempenho      | Chamar a próxima senha deve responder em menos de 500 ms; o painel se atualiza a cada 2 segundos; índices em `(service_date, status, type)`. |
 | RNF07 | LGPD            | O cliente é anônimo (princípio da minimização, art. 6º, III): o sistema não coleta nome, CPF ou qualquer dado pessoal do cliente. Dados de atendentes limitam-se ao necessário para autenticação e auditoria. |
-| RNF08 | Acessibilidade  | Anúncio por voz (Web Speech API, pt-BR), região `aria-live` no painel, alto contraste, fontes grandes, botões grandes no totem e navegação por teclado. |
+| RNF08 | Acessibilidade  | Em atenção à Lei Brasileira de Inclusão (Lei 13.146/2015) e às diretrizes WCAG 2.1: anúncio por voz (Web Speech API, pt-BR), região `aria-live` no painel, alto contraste, fontes grandes, botões grandes no totem, link "pular para o conteúdo", foco visível, navegação por teclado e respeito a `prefers-reduced-motion`. |
 | RNF09 | Usabilidade     | O totem emite a senha com um único toque. |
 | RNF10 | Portabilidade   | O frontend roda com `npm run dev` a partir de `frontend/`; o backend roda com `npm run dev` a partir de `backend/`. |
+| RNF11 | Auditoria/LGPD  | Registros de auditoria guardam apenas o identificador do atendente, o guichê e os horários. O acesso aos relatórios é restrito ao gestor (princípios da necessidade e da segurança, LGPD art. 6º). |
+| RNF12 | Segurança       | Cabeçalhos HTTP de segurança (Helmet), limite de 100 kB no corpo das requisições, mensagem de login que não revela se o usuário existe e segredos fora do código (`.env`, não versionado). |
