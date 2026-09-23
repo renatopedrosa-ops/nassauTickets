@@ -1,0 +1,27 @@
+{
+  "name": "nassau-tickets-backend",
+  "version": "1.0.0",
+  "description": "API REST do nassauTickets — controle de atendimento por senhas",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "db:init": "node scripts/initDb.js",
+    "simulate": "node scripts/simulate.js",
+    "test": "node --test --test-concurrency=1 tests/*.test.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.4"
+  }
+}

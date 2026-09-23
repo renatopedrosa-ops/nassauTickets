@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" role="img" aria-label="nassauTickets">
+  <rect width="64" height="64" rx="14" fill="#0b6e75"/>
+  <path d="M14 22a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v5a5 5 0 0 0 0 10v5a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4v-5a5 5 0 0 0 0-10z" fill="#fff"/>
+  <path d="M27 26h10v12H27z" fill="#0b6e75"/>
+  <path d="M30 29h4v6h-4z" fill="#f2a93b"/>
+  <text x="78" y="42" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="30" fill="#07494e">nassau<tspan font-weight="700" fill="#0b6e75">Tickets</tspan></text>
+</svg>
