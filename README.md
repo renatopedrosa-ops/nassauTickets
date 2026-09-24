@@ -146,7 +146,7 @@ nassauTickets/
 ### Pré-requisitos
 
 - [Node.js 22 LTS](https://nodejs.org/) (inclui o npm)
-- [MySQL 8.0](https://dev.mysql.com/downloads/mysql/) **ou** [Docker](https://www.docker.com/) para subir o MySQL com um comando
+- [MySQL 8.0](https://dev.mysql.com/downloads/mysql/), **ou** [Docker](https://www.docker.com/) para subir o MySQL com um comando, **ou** o MySQL/MariaDB do XAMPP/WAMP
 - Git
 
 ### 1. Clonar o repositório
@@ -173,6 +173,15 @@ GRANT ALL ON nassau_tickets.* TO 'nassau'@'localhost';
 GRANT ALL ON nassau_tickets_test.* TO 'nassau'@'localhost';
 ```
 
+**Opção C — XAMPP ou WAMP (se você já usa):** basta iniciar o **MySQL** no painel do XAMPP/WAMP (o Apache e o PHP não são usados). O projeto é compatível com o MariaDB que vem no XAMPP. No `backend/.env`, use:
+
+```
+DB_USER=root
+DB_PASSWORD=
+```
+
+(no XAMPP, o usuário `root` vem sem senha por padrão).
+
 ### 3. Backend
 
 ```bash
@@ -189,6 +198,10 @@ npm run simulate -- --days 10   # opcional: gera 10 dias de dados para os relat�
 cd frontend
 npm install
 ```
+
+> **Atenção:** não abra o `frontend/index.html` direto no navegador nem pelo Live Server. A página fica em branco, porque o React (JSX) precisa ser processado pelo Vite. Use sempre `npm run dev` e acesse `http://localhost:5173`.
+>
+> **Dica (Windows):** evite pastas dentro do OneDrive ou com apóstrofo/espaços no caminho. Prefira algo como `C:\projetos\nassauTickets`.
 
 ## Configuração
 
