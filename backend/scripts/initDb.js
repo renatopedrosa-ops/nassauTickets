@@ -2,6 +2,7 @@
 // Uso: npm run db:init            (idempotente)
 //      npm run db:init -- --reset (APAGA todas as tabelas e recria)
 import { readFile } from 'node:fs/promises';
+import { pathToFileURL } from 'node:url';
 import bcrypt from 'bcryptjs';
 import mysql from 'mysql2/promise';
 import { config } from '../src/config/env.js';
@@ -47,7 +48,9 @@ export const initDatabase = async ({ reset = false, silent = false } = {}) => {
   }
 };
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+// Roda só quando chamado pelo terminal (npm run db:init), não quando importado pelos testes.
+// pathToFileURL converte o caminho corretamente no Windows (C:\...) e no Linux/macOS.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   initDatabase({ reset: process.argv.includes('--reset') }).catch((error) => {
     console.error('Falha ao inicializar o banco:', error.message);
     process.exit(1);
