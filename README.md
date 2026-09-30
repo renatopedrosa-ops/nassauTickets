@@ -1,5 +1,12 @@
 # nassauTickets
 
+## Integrantes 
+| Nome           | Matrícula | Papel         | 
+|----------------|-----------|---------------|
+|Túlio Barbosa de Souza |01903086  |Scrum Master   |
+|Carlos Eduardo Vieira de Carvalho| 01707600 |Documentador|
+|Renato Pedrosa Maranhão|01892670 | Desenvolvedor|
+
 Sistema de **controle de atendimento por senhas** para um Laboratório de Análises Clínicas: emissão de senhas no totem, fila com regras de prioridade, chamada no painel com áudio, atendimento no guichê, relatórios gerenciais e auditoria.
 
 ![Painel de chamadas](docs/mockups/06-painel.png)
