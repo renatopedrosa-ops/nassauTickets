@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Super Mario JS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>Super Mario <span>JS</span></h1>
+
+    <div class="screen">
+      <canvas id="game" width="800" height="480"></canvas>
+    </div>
+
+    <div class="touch" aria-hidden="true">
+      <div class="pad">
+        <button data-btn="left">◀</button>
+        <button data-btn="right">▶</button>
+      </div>
+      <div class="pad">
+        <button data-btn="run" class="b">B</button>
+        <button data-btn="jump" class="a">A</button>
+      </div>
+    </div>
+
+    <section class="help">
+      <p><kbd>←</kbd> <kbd>→</kbd> / <kbd>A</kbd> <kbd>D</kbd> mover</p>
+      <p><kbd>Espaço</kbd> / <kbd>↑</kbd> / <kbd>W</kbd> pular</p>
+      <p><kbd>Shift</kbd> / <kbd>X</kbd> correr</p>
+      <p><kbd>Enter</kbd> iniciar / pausar</p>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
