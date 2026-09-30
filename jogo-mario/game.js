@@ -955,8 +955,8 @@
     const blink = Math.floor(performance.now() / 500) % 2 === 0;
     if (state === 'title') {
       overlay(0.45);
-      shadowText('SUPER MARIO', W / 2, 170, 40, '#e52521', 'center');
-      shadowText('JS', W / 2, 225, 32, '#f8d000', 'center');
+      shadowText('JOGO', W / 2, 170, 40, '#f8d000', 'center');
+      shadowText('MARIO', W / 2, 230, 40, '#e52521', 'center');
       if (blink) shadowText('PRESSIONE ENTER OU TOQUE', W / 2, 300, 14, '#fff', 'center');
       shadowText('SETAS: MOVER  ESPACO: PULAR  SHIFT: CORRER', W / 2, 360, 10, '#cfd8ff', 'center');
       shadowText('PISE NOS INIMIGOS E CHEGUE A BANDEIRA!', W / 2, 390, 10, '#cfd8ff', 'center');

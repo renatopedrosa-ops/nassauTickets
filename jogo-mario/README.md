@@ -1,4 +1,4 @@
-# Super Mario JS
+# Jogo Mario
 
 Jogo de plataforma no estilo Super Mario feito com **HTML5 Canvas + CSS + JavaScript puro** (sem bibliotecas, sem imagens: todos os gráficos e sons são gerados por código).
 
@@ -7,7 +7,7 @@ Jogo de plataforma no estilo Super Mario feito com **HTML5 Canvas + CSS + JavaSc
 Abra `index.html` no navegador (duplo clique já funciona) ou sirva a pasta:
 
 ```bash
-cd mario-game
+cd jogo-mario
 python3 -m http.server 8080   # depois acesse http://localhost:8080
 ```
 
