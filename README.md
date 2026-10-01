@@ -315,6 +315,7 @@ Fluxo: commits pequenos na `dev` (padrão *Conventional Commits*: `feat:`, `fix:
 | Documento | Conteúdo |
 |-----------|----------|
 | [Requisitos](docs/requirements/requisitos.md) | Requisitos funcionais e não funcionais, regras de negócio, estados e relatórios. |
+| [Planejamento por etapas (Sprints)](docs/requirements/planejamento-sprints.md) | Etapas do projeto, papéis da equipe e tarefas de cada membro. |
 | [Disponibilidade e desempenho](docs/requirements/disponibilidade-e-desempenho.md) | Recuperação de falhas, concorrência e indicadores de desempenho. |
 | [Casos de uso](docs/models/uml/casos-de-uso.md) | Diagrama e especificação dos casos de uso. |
 | [Diagramas UML](docs/models/uml/diagramas.md) | Estados, classes, sequência e componentes. |
